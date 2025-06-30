@@ -42,9 +42,9 @@ function App() {
 
     const promedioNumerico = parseFloat(promedio);
 
-    // Validar que el promedio esté entre 1.0 y 7.0
-    if (promedioNumerico < 1 || promedioNumerico > 7) {
-      alert("El promedio debe estar entre 1.0 y 7.0");
+    // Validar que el promedio esté entre 0.0 y 7.0
+    if (promedioNumerico < 0 || promedioNumerico > 7) {
+      alert("El promedio debe estar entre 0.0 y 7.0");
       return;
     }
 
@@ -87,7 +87,7 @@ function App() {
         <label>
           Nombre Alumno:
           <input
-            placeholder="Ej: Leonardo Dicaprio"
+            placeholder="Ej: Juan Perez"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -96,17 +96,17 @@ function App() {
         <label>
           Asignatura:
           <input
-            placeholder="Ej: Ingeniería Informática"
+            placeholder="Ej: Matematicas"
             value={asignatura}
             onChange={(e) => setAsignatura(e.target.value)}
           />
         </label>
 
         <label>
-          Promedio (1.0 - 7.0):
+          Promedio (0.0 - 7.0):
           <input
             type="number"
-            min="1"
+            min="0"
             max="7"
             step="0.1"
             placeholder="Ej: 5.5"
